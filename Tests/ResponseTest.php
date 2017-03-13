@@ -2,7 +2,7 @@
 
 include_once __DIR__ . "/../vendor/autoload.php";
 
-class ResponseTest extends PHPUnit_Framework_TestCase
+class ResponseTest extends \PHPUnit\Framework\TestCase
 {
     public function test()
     {
