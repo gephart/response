@@ -1,9 +1,9 @@
 {
-  "name": "gephart/reponse",
+  "name": "gephart/response",
   "type": "library",
-  "description": "Gephart Reponse Component",
+  "description": "Gephart Response Component",
   "keywords": [],
-  "homepage": "https://github.com/gephart/routing",
+  "homepage": "https://github.com/gephart/reponse",
   "license": "MIT",
   "authors": [
     {
