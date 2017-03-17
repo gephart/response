@@ -27,7 +27,7 @@ class Response implements ResponseInterface
         $this->send_headers = $send_headers;
     }
 
-    public function render()
+    public function render(): string
     {
         if ($this->send_headers) {
             $headers = array_merge($this->getBaseHeaders(), $this->headers);
@@ -37,7 +37,7 @@ class Response implements ResponseInterface
             }
         }
 
-        echo $this->content;
+        return $this->content;
     }
 
     private function getBaseHeaders(): array
