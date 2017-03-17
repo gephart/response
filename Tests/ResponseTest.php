@@ -6,11 +6,8 @@ class ResponseTest extends \PHPUnit\Framework\TestCase
 {
     public function test()
     {
-        ob_start();
         $response = new \Gephart\Response\Response("<body>test</body>", [], false);
-        $response->render();
-        $response = ob_get_contents();
-        ob_end_clean();
+        $response = $response->render();
 
         $this->assertTrue($response === "<body>test</body>");
     }
