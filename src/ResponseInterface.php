@@ -5,6 +5,6 @@ namespace Gephart\Response;
 interface ResponseInterface
 {
 
-    public function render(): string;
+    public function render();
 
 }
