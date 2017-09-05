@@ -2,6 +2,13 @@
 
 namespace Gephart\Response;
 
+/**
+ * Response JSON
+ *
+ * @package Gephart\Response
+ * @author Michal Katuščák <michal@katuscak.cz>
+ * @since 0.2
+ */
 class ResponseJson implements ResponseInterface
 {
 
@@ -20,6 +27,11 @@ class ResponseJson implements ResponseInterface
      */
     private $send_headers;
 
+    /**
+     * @param $content
+     * @param array $headers
+     * @param bool $send_headers
+     */
     public function __construct($content, array $headers = [], bool $send_headers = true)
     {
         $this->content = $content;
@@ -27,6 +39,9 @@ class ResponseJson implements ResponseInterface
         $this->send_headers = $send_headers;
     }
 
+    /**
+     * @return string
+     */
     public function render(): string
     {
         if ($this->send_headers) {
@@ -40,6 +55,9 @@ class ResponseJson implements ResponseInterface
         return json_encode($this->content);
     }
 
+    /**
+     * @return array
+     */
     private function getBaseHeaders(): array
     {
         return [
