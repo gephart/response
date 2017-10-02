@@ -6,5 +6,4 @@ interface ResponseInterface
 {
 
     public function render();
-
 }

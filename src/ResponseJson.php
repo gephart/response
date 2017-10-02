@@ -64,5 +64,4 @@ class ResponseJson implements ResponseInterface
             "content-type: application/json;charset=utf-8"
         ];
     }
-
 }
